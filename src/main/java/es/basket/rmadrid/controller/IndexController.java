@@ -1,17 +1,23 @@
 package es.basket.rmadrid.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+
+import es.basket.rmadrid.model.IndexModel;
 
 @Controller
 public class IndexController {
 
-	@GetMapping("/greetings")
-	public String greetings(@RequestParam(name = "name", required = false, defaultValue = "World") String name,
-			Model model) {
-		model.addAttribute("name", name);
-		return "greetings";
+	@Autowired
+	private IndexModel indexModel;
+
+	@GetMapping("/")
+	public String index(Model model) {
+
+		indexModel.execute(model);
+
+		return "index";
 	}
 }
