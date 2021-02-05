@@ -24,3 +24,47 @@ header h1 {
 	text-transform: uppercase;
 	text-shadow: 2px 2px black;
 }
+
+#navigation-menu {
+	font-size: 25px;
+	margin:10 0 0;
+	padding-left: 30px;
+}
+
+#navigation-menu li {
+	display: inline;
+	padding-right: 10px;
+	padding-left: 10px;
+	margin-left: 0px;
+	margin-right: 0px;
+	border-radius: 10px;
+}
+
+#navigation-menu li:hover {
+	text-decoration: none;
+	background-color: #8C008A;
+}
+
+#navigation-menu a {
+	padding-right: 10px;
+	padding-left: 10px;
+	color: #8C008A;
+}
+
+#navigation-menu a:link {
+	text-decoration: none;
+}
+
+#navigation-menu a:visited {
+	text-decoration: none;
+}
+
+#navigation-menu a:hover {
+	text-decoration: none;
+	background-color: #8C008A;
+	color: white;
+}
+
+#navigation-menu a:active {
+	text-decoration: none;
+}

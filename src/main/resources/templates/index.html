@@ -16,7 +16,11 @@
 		<h1 th:text="${title}"/>
 	</header>
 	<nav>
+	
 		<!-- TODO navigation bar -->
+		<ul id="navigation-menu">
+			<li th:each="item: ${menu}"><a th:href="${item.link}" th:text="${item.item}" /></li>
+		</ul>
 	</nav>
 	
 	<section>
