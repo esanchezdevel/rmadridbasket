@@ -26,18 +26,22 @@ header h1 {
 }
 
 #navigation-menu {
-	font-size: 25px;
+	background-color: black;
+	font-size: 18px;
 	margin:10 0 0;
 	padding-left: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 #navigation-menu li {
 	display: inline;
 	padding-right: 10px;
 	padding-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	margin-left: 0px;
 	margin-right: 0px;
-	border-radius: 10px;
 }
 
 #navigation-menu li:hover {
@@ -48,7 +52,9 @@ header h1 {
 #navigation-menu a {
 	padding-right: 10px;
 	padding-left: 10px;
-	color: #8C008A;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: white;
 }
 
 #navigation-menu a:link {
