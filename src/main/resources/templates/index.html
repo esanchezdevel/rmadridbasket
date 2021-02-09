@@ -19,7 +19,7 @@
 	
 		<!-- TODO navigation bar -->
 		<ul id="navigation-menu">
-			<li th:each="item: ${menu}"><a th:href="${item.link}" th:text="${item.item}" /></li>
+			<li th:each="item: ${menu}"><a th:href="${item.link}" th:utext="${item.item}" /></li>
 		</ul>
 	</nav>
 	
