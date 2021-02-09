@@ -15,7 +15,7 @@
 	<header>
 		<h1 th:text="${title}"/>
 	</header>
-	<nav id="menu-nav">
+	<nav>
 		<ul id="navigation-menu">
 			<li th:each="item: ${menu}"><a th:href="${item.link}" th:utext="${item.item}" /></li>
 		</ul>
@@ -23,7 +23,7 @@
 	
 	<section>
 		<header><h2>&Uacute;ltimas Noticias:</h2></header>
-		<article th:each="item: ${news}">
+		<article class="index-articles" th:each="item: ${news}">
 			<header>
 				<h3 th:utext="${item.title}"/>
 			</header>
