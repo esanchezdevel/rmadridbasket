@@ -29,10 +29,12 @@
 		</header>
 		<hr/>
 		<article th:each="item: ${news}" th:class="${itemStat.odd}? 'index-article odd-background' : 'index-article'">
+			<a th:href="'/Menus/' + ${item.id}">
 			<header>
 				<h3 class="news-title" th:utext="${item.title}"/>
 			</header>
 			<p class="news-content-preview" th:utext="${item.content}"/>
+			</a>
 		</article>
 	</section>
 	
