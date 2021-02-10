@@ -35,6 +35,6 @@ public class IndexModel {
 		
 		model.addAttribute("menu", menus.findMenu("site-menu"));
 		
-		model.addAttribute("news", news.findLastNews(5));
+		model.addAttribute("news", news.findLastNews(3));
 	}
 }

@@ -4,6 +4,7 @@
 COLORS USED
 ===========
 purple: 8C008A
+light-grey: DBDBDB
 */
 
 
@@ -48,7 +49,7 @@ h3 {
 	font-family: 'Open Sans Condensed', sans-serif;
 	font-size: 25px;
 	font-weight: 700;
-	line-height: 64px;
+	line-height: 40px;
 	margin: 0 0 0;
 	padding: 20px 30px;
 	text-align: left;
@@ -128,4 +129,16 @@ hr {
 	margin-right: 30px;
 	width: 700px;
 	line-height: 1.5em; /*for space between lines*/
+}
+
+.index-article {
+	width: 730px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 15px;
+	box-shadow: 2px 2px black;
+}
+
+.odd-background {
+	background-color: #DBDBDB;
 }

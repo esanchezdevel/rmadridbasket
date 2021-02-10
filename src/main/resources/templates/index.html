@@ -28,7 +28,7 @@
 			<h2 class="section-title">&Uacute;ltimas Noticias:</h2>
 		</header>
 		<hr/>
-		<article th:each="item: ${news}">
+		<article th:each="item: ${news}" th:class="${itemStat.odd}? 'index-article odd-background' : 'index-article'">
 			<header>
 				<h3 class="news-title" th:utext="${item.title}"/>
 			</header>
