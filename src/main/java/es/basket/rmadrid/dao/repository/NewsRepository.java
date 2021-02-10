@@ -11,6 +11,6 @@ import es.basket.rmadrid.dao.entity.News;
 @Repository
 public interface NewsRepository extends JpaRepository<News, Long> {
 
-	@Query(value="SELECT * FROM news ORDER BY id DESC LIMIT ?1", nativeQuery = true)
+	@Query(value="SELECT id, title, CONCAT(SUBSTRING(content, 1, 200),'....') AS content, link, source, created, updated FROM news ORDER BY id DESC LIMIT ?1", nativeQuery = true)
 	List<News> findLastNews(int limit);
 }

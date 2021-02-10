@@ -21,13 +21,18 @@
 		</ul>
 	</nav>
 	
+	<hr/>
+	
 	<section>
-		<header><h2>&Uacute;ltimas Noticias:</h2></header>
-		<article class="index-articles" th:each="item: ${news}">
+		<header>
+			<h2 class="section-title">&Uacute;ltimas Noticias:</h2>
+		</header>
+		<hr/>
+		<article th:each="item: ${news}">
 			<header>
-				<h3 th:utext="${item.title}"/>
+				<h3 class="news-title" th:utext="${item.title}"/>
 			</header>
-			<p th:utext="${item.content}"/>
+			<p class="news-content-preview" th:utext="${item.content}"/>
 		</article>
 	</section>
 	

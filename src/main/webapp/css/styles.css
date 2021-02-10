@@ -1,6 +1,10 @@
 @charset "UTF-8";
 
-/*purple: 8C008A*/
+/*
+COLORS USED
+===========
+purple: 8C008A
+*/
 
 
 body {
@@ -101,6 +105,27 @@ h3 {
 	text-decoration: none;
 }
 
-.index-articles {
+.section-title {
 	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+.news-title {
+	padding-top: 0px;
+	padding-bottom: 0px;
+	width: 700px;
+}
+
+hr {
+	border-top: 0.1px solid;
+ 	border-bottom: 0px solid;
+}
+
+.news-content-preview {
+	margin-top: 0px;
+	margin-bottom: 5px;
+	margin-left: 30px;
+	margin-right: 30px;
+	width: 700px;
+	line-height: 1.5em; /*for space between lines*/
 }
