@@ -56,6 +56,10 @@ h3 {
 	text-transform: uppercase;
 }
 
+a {
+	outline: 0;
+}
+
 #navigation-menu {
 	background-color: black;
 	font-size: 18px;
