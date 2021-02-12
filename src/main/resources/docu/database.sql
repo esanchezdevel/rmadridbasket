@@ -59,5 +59,55 @@ INSERT INTO news (title, content, link, source) VALUES ('Noticia n&uacute;mero 6
 INSERT INTO news (title, content, link, source) VALUES ('Noticia n&uacute;mero 7', 'Este es un texto de ejemplo. <br/>. Aqu&iacute; hay un salto de linea, a ver como sale. Este texto es de ejemplo, y se repetira varias veces. <br/> Este es un texto de ejemplo. <br/>. Aqu&iacute; hay un salto de linea, a ver como sale. Este texto es de ejemplo, y se repetira varias veces. <br/> Este es un texto de ejemplo. <br/>. Aqu&iacute; hay un salto de linea, a ver como sale. Este texto es de ejemplo, y se repetira varias veces. <br/> Este es un texto de ejemplo. <br/>. Aqu&iacute; hay un salto de linea, a ver como sale. Este texto es de ejemplo, y se repetira varias veces. <br/> Este es un texto de ejemplo. <br/>. Aqu&iacute; hay un salto de linea, a ver como sale. Este texto es de ejemplo, y se repetira varias veces. <br/> Este es un texto de ejemplo. <br/>. Aqu&iacute; hay un salto de linea, a ver como sale. Este texto es de ejemplo, y se repetira varias veces. <br/> Este es un texto de ejemplo. <br/>. Aqu&iacute; hay un salto de linea, a ver como sale. Este texto es de ejemplo, y se repetira varias veces. <br/> Este es un texto de ejemplo. <br/>. Aqu&iacute; hay un salto de linea, a ver como sale. Este texto es de ejemplo, y se repetira varias veces. <br/> Este es un texto de ejemplo. <br/>. Aqu&iacute; hay un salto de linea, a ver como sale. Este texto es de ejemplo, y se repetira varias veces. <br/> Este es un texto de ejemplo. <br/>. Aqu&iacute; hay un salto de linea, a ver como sale. Este texto es de ejemplo, y se repetira varias veces. <br/>', 'http://example.link.com', 'eurosport.es');
 INSERT INTO news (title, content, link, source) VALUES ('El Real Madrid cede al Betis a su joven perla Boris Tisma', 'Boris Tisma, uno de los jugadores más prometedores de la cantera del Real Madrid, jugará decido en el Coosur Real Betis, según ha publicado Eurohopes. El alero croata de 18 años y 2,05 metros trabajará a las órdenes de Joan Plaza y tratará de ayudar a que el equipo verdiblanco escape del pozo. Actualmente es antepenúltimo con un balance de cinco victorias y 16 derrotas.</p><p>El canterano madridista lleva en dinámica de la primera plantilla durante buena parte de la temporada y en los últimos partidos, ante los problemas físicos de varios jugadores, ha formado parte de las convocatorias de Pablo Laso. Sin embargo, no ha participado en ningún encuentro.</p><p>Tisma debutó con el primer equipo en la Liga Endesa la temporada pasada jugando 43 segundo en un encuentro ante el Casademont Zaragoza. En ese poco tiempo tuvo oportunidad de anotar su primera canasta en la competición. Esta campaña sólo ha participado en un encuentro, ante el Joventut, cuando disputó 3:20 sin llegar a lanzar a canasta.</p><p><em><strong><a href="https://seguro.marca.com/newsletters.html" target="_blank">Suscríbete a la Newsletter de Basket de MARCA</a></strong> y recibe en tu correo electrónico, de lunes a domingo y a primera hora de la mañana, las noticias exclusivas, entrevistas, reportajes, gráficos y vídeos que marcarán el día en la NBA, Liga Endesa, Euroliga y el resto del mundo de la canasta.', 'https://www.marca.com/baloncesto/acb/2021/02/08/60219f3046163f68118b45f1.html', 'marca.com');
 
+/*GAMES*/
+
+CREATE TABLE games (
+	id int PRIMARY KEY AUTO_INCREMENT, 
+	`local` VARCHAR(100) NOT NULL,
+	visitor VARCHAR(100) NOT NULL, 
+	score_local int NOT NULL DEFAULT 0, 
+	score_visitor int NOT NULL DEFAULT 0,
+	tournament_id int NOT NULL,
+	`date` TIMESTAMP NOT NULL,
+	played BOOLEAN DEFAULT false,
+	court VARCHAR(100) NOT NULL,
+	channel_id int NOT NULL DEFAULT 1,
+	updated TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+INSERT INTO games (`local`, visitor, score_local, score_visitor, tournament_id, `date`, played, court, channel_id) VALUES ('Real Madrid', 'Valencia Basket', 85, 74, 3, '2021-02-11 21:30:00', true, 'WiZink Center, Madrid', 1);
+
+
+/*TOURNAMENTS*/
+
+CREATE TABLE tournaments (
+	id int PRIMARY KEY AUTO_INCREMENT,
+	name VARCHAR(100) NOT NULL,
+	season VARCHAR(25) NOT NULL,
+	updated TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+INSERT INTO tournaments (name, season) VALUES ('Liga Endesa', '2020/21');
+INSERT INTO tournaments (name, season) VALUES ('Euroleague', '2020/21');
+INSERT INTO tournaments (name, season) VALUES ('Copa del Rey', '2021');
+
+
+/*CHANNELS*/
+CREATE TABLE channels (
+	id int PRIMARY KEY AUTO_INCREMENT,
+	name VARCHAR(100) NOT NULL,
+	platform VARCHAR(25) NOT NULL,
+	updated TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+INSERT INTO channels (name, platform) VALUES ('Vamos#', 'Movistar+');
+INSERT INTO channels (name, platform) VALUES ('Canal Deportes1', 'Movistar+');
+INSERT INTO channels (name, platform) VALUES ('Canal Deportes2', 'Movistar+');
+INSERT INTO channels (name, platform) VALUES ('DAZN1', 'Movistar+');
+INSERT INTO channels (name, platform) VALUES ('DAZN2', 'Movistar+');
+INSERT INTO channels (name, platform) VALUES ('DAZN', 'DAZN');
+
+
+
 
 
