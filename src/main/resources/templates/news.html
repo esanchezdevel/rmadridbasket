@@ -24,17 +24,12 @@
 	<hr/>
 	
 	<section>
-		<header>
-			<h2 class="section-title">&Uacute;ltimas Noticias:</h2>
-		</header>
 		<hr/>
-		<article th:each="item: ${news}" th:class="${itemStat.odd}? 'index-article odd-background' : 'index-article'">
-			<a th:href="'/News/' + ${item.id}">
+		<article class='index-article'>
 			<header>
-				<h3 class="news-title" th:utext="${item.title}"/>
+				<h3 class="news-title" th:utext="${news.title}"/>
 			</header>
-			<p class="news-content-preview" th:utext="${item.content}"/>
-			</a>
+			<p class="news-content-preview" th:utext="${news.content}"/>
 		</article>
 	</section>
 	
