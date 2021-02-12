@@ -6,6 +6,7 @@ COLORS USED
 purple: 8C008A
 light-purple: D8ADDE
 light-grey: DBDBDB
+orange: 9F6A00
 */
 
 
@@ -181,12 +182,12 @@ hr {
 }
 
 #last-result td {
-	font-size: 25px;
 	padding-top: 5px;
 	padding-bottom: 5px;
 }
 
 #team-left {
+	font-size: 25px;
 	padding-right: 5px;
 	text-align: right;
 	width: 42%;
@@ -198,6 +199,7 @@ hr {
 }
 
 #team-right {
+	font-size: 25px;
 	padding-left: 5px;
 	text-align: left;
 	width: 42%;
@@ -213,4 +215,7 @@ hr {
 	width: 8%;
 	background-color: #D8ADDE;
 	border: 1px solid #8C008A;
+	font-family: 'Quantico', sans-serif;
+	color: #9F6A00;
+	font-size: 35px;
 }
