@@ -28,12 +28,12 @@
 		<header><h2>&Uacute;ltimo Resultado</h2></header>
 		
 		<table>
-			<tr><th colspan="4">Liga Endesa</th></tr>
+			<tr><th colspan="4" th:text="${lastGame.tournament.name} + ' '+ ${lastGame.tournament.season}"/></tr>
 			<tr>
-				<td id="team-left">Real Madrid</td>
-				<td class="result">102</td>
-				<td class="result" id="result-right">98</td>
-				<td id="team-right">Valencia Basket</td>
+				<td id="team-left" th:text="${lastGame.local}"/>
+				<td class="result" th:text="${lastGame.scoreLocal}"/>
+				<td class="result" id="result-right" th:text="${lastGame.scoreVisitor}"/>
+				<td id="team-right" th:text="${lastGame.visitor}"/>
 			</tr>
 		</table>
 	</section>
