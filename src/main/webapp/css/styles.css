@@ -219,3 +219,9 @@ hr {
 	color: #9F6A00;
 	font-size: 35px;
 }
+
+#navigation-bar {
+	position: absolute;
+	top: 450px;
+	left: 800px;
+}
