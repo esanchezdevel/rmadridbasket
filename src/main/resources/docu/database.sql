@@ -70,6 +70,7 @@ CREATE TABLE games (
 	score_local int NOT NULL DEFAULT 0, 
 	score_visitor int NOT NULL DEFAULT 0,
 	tournament_id int NOT NULL,
+	round VARCHAR(75) NOT NULL,
 	`date` TIMESTAMP NOT NULL,
 	played BOOLEAN DEFAULT false,
 	court VARCHAR(100) NOT NULL,
@@ -77,7 +78,8 @@ CREATE TABLE games (
 	updated TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
-INSERT INTO games (`local`, visitor, score_local, score_visitor, tournament_id, `date`, played, court, channel_id) VALUES ('Real Madrid', 'Valencia Basket', 85, 74, 3, '2021-02-11 21:30:00', true, 'WiZink Center, Madrid', 1);
+INSERT INTO games (`local`, visitor, score_local, score_visitor, tournament_id, round, `date`, played, court, channel_id) VALUES ('Real Madrid', 'Valencia Basket', 85, 74, 3, '1/4 de Final', '2021-02-11 21:30:00', true, 'WiZink Center, Madrid', 1);
+INSERT INTO games (`local`, visitor, score_local, score_visitor, tournament_id, round, `date`, played, court, channel_id) VALUES ('Real Madrid', 'F.C.Barcelona', 73, 88, 3, 'Final' , '2021-02-14 18:30:00', true, 'WiZink Center, Madrid', 1);
 
 
 /*TOURNAMENTS*/

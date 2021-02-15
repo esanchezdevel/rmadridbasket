@@ -37,6 +37,8 @@ public class Games {
     @ManyToOne
 	@JoinColumn(name = "tournament_id")
 	private Tournaments tournament;
+    
+    private String round;
 
 	private Boolean played;
 	
@@ -95,6 +97,14 @@ public class Games {
 
 	public void setTournament(Tournaments tournament) {
 		this.tournament = tournament;
+	}
+
+	public String getRound() {
+		return round;
+	}
+
+	public void setRound(String round) {
+		this.round = round;
 	}
 
 	public Boolean getPlayed() {

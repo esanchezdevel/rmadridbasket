@@ -28,7 +28,7 @@
 		<header><h2>&Uacute;ltimo Resultado</h2></header>
 		
 		<table>
-			<tr><th colspan="4" th:text="${lastGame.tournament.name} + ' '+ ${lastGame.tournament.season}"/></tr>
+			<tr><th colspan="4" th:text="${lastGame.tournament.name} + ' '+ ${lastGame.tournament.season} + ' ' + ${lastGame.round}"/></tr>
 			<tr>
 				<td id="team-left" th:text="${lastGame.local}"/>
 				<td class="result" th:text="${lastGame.scoreLocal}"/>
@@ -59,9 +59,9 @@
 		<!-- TODO navigation bar with next games, publicity... -->
 		  <h3>Pr&oacute;ximos partidos</h3>
 		  <ul>
-    		<li>Real Madrid - Lenovo Tenerife</li>
-    		<li>Real Madrid - F.C.Barcelona</li>
-    		<li>Zalguiris Kaunas - Real Madrid</a></li>
+    		<li>Real Madrid - Lenovo Tenerife 13/02/2021 16:00h</li>
+    		<li>Real Madrid - F.C.Barcelona 14/02/2021 18:30h</li>
+    		<li>Zalguiris Kaunas - Real Madrid 18/02/2021 19:00h</a></li>
   		</ul>
 	</nav>
 	
