@@ -229,6 +229,7 @@ hr {
 #navigation-bar h3 {
 	padding-bottom: 10px;
 	padding-top: 10px;
+	padding-left: 10px;
 }
 
 #navigation-bar  ul {
@@ -245,8 +246,19 @@ hr {
  	padding-left: 10px;
  	padding-right: 10px;
  	margin-bottom: 5px;
- 	text-align: center;
  	outline: 1px solid #DBDBDB;
+ 	width: 100%;
+ 	height: 20px;
+}
+
+.next-games-left {
+	display: block;
+	float: left;
+}
+
+.next-games-right {
+	display: block;
+	float: right;
 }
  
  
