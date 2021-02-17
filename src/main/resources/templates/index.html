@@ -61,6 +61,8 @@
     		<li th:each="item: ${nextGames}">
     			<span class="next-games-left" th:text="${item.local} + ' - ' + ${item.visitor}" />
     			<span class="next-games-right" th:text="${#dates.format(item.date, 'dd-MM-yyyy HH:mm') + 'h'}" />
+    			<br />
+    			<span class="next-games-bottom" th:text="${item.round} + ' ' + ${item.channel.name}"/>
     		</li>
   		</ul>
 	</nav>
