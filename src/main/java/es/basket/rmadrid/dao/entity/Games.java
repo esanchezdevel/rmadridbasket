@@ -39,6 +39,8 @@ public class Games {
 	private Tournaments tournament;
     
     private String round;
+    
+    private Date date;
 
 	private Boolean played;
 	
@@ -105,6 +107,14 @@ public class Games {
 
 	public void setRound(String round) {
 		this.round = round;
+	}
+	
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
 	}
 
 	public Boolean getPlayed() {

@@ -80,6 +80,9 @@ CREATE TABLE games (
 
 INSERT INTO games (`local`, visitor, score_local, score_visitor, tournament_id, round, `date`, played, court, channel_id) VALUES ('Real Madrid', 'Valencia Basket', 85, 74, 3, '1/4 de Final', '2021-02-11 21:30:00', true, 'WiZink Center, Madrid', 1);
 INSERT INTO games (`local`, visitor, score_local, score_visitor, tournament_id, round, `date`, played, court, channel_id) VALUES ('Real Madrid', 'F.C.Barcelona', 73, 88, 3, 'Final' , '2021-02-14 18:30:00', true, 'WiZink Center, Madrid', 1);
+INSERT INTO games (`local`, visitor, score_local, score_visitor, tournament_id, round, `date`, played, court, channel_id) VALUES ('Valencia Basket', 'Real Madrid', 0, 0, 2, 'Jornada 25' , '2021-02-19 21:00:00', false, 'Pabell&oacute;n Fuente de San Luis', 6);
+INSERT INTO games (`local`, visitor, score_local, score_visitor, tournament_id, round, `date`, played, court, channel_id) VALUES ('Real Madrid', 'Zalgiris Kaunas', 0, 0, 2, 'Jornada 26' , '2021-02-25 21:00:00', false, 'WiZink Center, Madrid', 1);
+INSERT INTO games (`local`, visitor, score_local, score_visitor, tournament_id, round, `date`, played, court, channel_id) VALUES ('Real Madrid', 'San Pablo Burgos', 0, 0, 2, 'Jornada 24' , '2021-02-27 20:45:00', false, 'WiZink Center, Madrid', 1);
 
 
 /*TOURNAMENTS*/

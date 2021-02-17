@@ -40,5 +40,7 @@ public class IndexModel {
 		model.addAttribute("news", news.findLastNews(3));
 		
 		model.addAttribute("lastGame", games.findLastGamePlayed());
+		
+		model.addAttribute("nextGames", games.findNextGames());
 	}
 }
