@@ -27,61 +27,65 @@
 	</script>
 </head>
 <body>
-	<header>
-		<h1 th:text="${title}"/>
-	</header>
-	<nav>		
-		<div class="topnav" id="myTopnav">
-			<a th:each="item: ${menu}" th:href="${item.link}" th:utext="${item.item}" />
-			<a href="javascript:void(0);" class="icon" onclick="showMenu()">&#9776;</a>
-		</div> 
-	</nav>
-	
-	<section id="last-result">
-		<header><h2>&Uacute;ltimo Resultado</h2></header>
-		
-		<table>
-			<tr><th colspan="4" th:text="${lastGame.tournament.name} + ' '+ ${lastGame.tournament.season} + ' ' + ${lastGame.round}"/></tr>
-			<tr>
-				<td id="team-left" th:text="${lastGame.local}"/>
-				<td class="result" th:text="${lastGame.scoreLocal}"/>
-				<td class="result" id="result-right" th:text="${lastGame.scoreVisitor}"/>
-				<td id="team-right" th:text="${lastGame.visitor}"/>
-			</tr>
-		</table>
-	</section>
-	
-	<hr/>
-	
-	<section>
+<div class="page-container">
+	<div class="content-wrap">
 		<header>
-			<h2 class="section-title">&Uacute;ltimas Noticias:</h2>
+			<h1 th:text="${title}"/>
 		</header>
+		<nav>		
+			<div class="topnav" id="myTopnav">
+				<a th:each="item: ${menu}" th:href="${item.link}" th:utext="${item.item}" />
+				<a href="javascript:void(0);" class="icon" onclick="showMenu()">&#9776;</a>
+			</div> 
+		</nav>
+		
+		<section id="last-result">
+			<header><h2>&Uacute;ltimo Resultado</h2></header>
+			
+			<table>
+				<tr><th colspan="4" th:text="${lastGame.tournament.name} + ' '+ ${lastGame.tournament.season} + ' ' + ${lastGame.round}"/></tr>
+				<tr>
+					<td id="team-left" th:text="${lastGame.local}"/>
+					<td class="result" th:text="${lastGame.scoreLocal}"/>
+					<td class="result" id="result-right" th:text="${lastGame.scoreVisitor}"/>
+					<td id="team-right" th:text="${lastGame.visitor}"/>
+				</tr>
+			</table>
+		</section>
+		
 		<hr/>
-		<article th:each="item: ${news}" th:class="${itemStat.odd}? 'index-article odd-background' : 'index-article'">
-			<a th:href="'/News/' + ${item.id}">
+		
+		<section>
 			<header>
-				<h3 class="news-title" th:utext="${item.title}"/>
+				<h2 class="section-title">&Uacute;ltimas Noticias:</h2>
 			</header>
-			<p class="news-content-preview" th:utext="${item.content}"/>
-			</a>
-		</article>
-	</section>
-	
-	<nav id="navigation-bar">
-		  <h3>Pr&oacute;ximos partidos</h3>
-		  <ul>
-    		<li th:each="item: ${nextGames}">
-    			<span class="next-games-left" th:text="${item.local} + ' - ' + ${item.visitor}" />
-    			<span class="next-games-right" th:text="${#dates.format(item.date, 'dd-MM-yyyy HH:mm') + 'h'}" />
-    			<br />
-    			<span class="next-games-bottom" th:text="${item.round} + ' ' + ${item.channel.name}"/>
-    		</li>
-  		</ul>
-	</nav>
-	
-	<footer>
-		<!-- TODO footer -->
-	</footer>
+			<hr/>
+			<article th:each="item: ${news}" th:class="${itemStat.odd}? 'index-article odd-background' : 'index-article'">
+				<a th:href="'/News/' + ${item.id}">
+				<header>
+					<h3 class="news-title" th:utext="${item.title}"/>
+				</header>
+				<p class="news-content-preview" th:utext="${item.content}"/>
+				</a>
+			</article>
+		</section>
+		
+		<nav id="navigation-bar">
+			  <h3>Pr&oacute;ximos partidos</h3>
+			  <ul>
+	    		<li th:each="item: ${nextGames}">
+	    			<span class="next-games-left" th:text="${item.local} + ' - ' + ${item.visitor}" />
+	    			<span class="next-games-right" th:text="${#dates.format(item.date, 'dd-MM-yyyy HH:mm') + 'h'}" />
+	    			<br />
+	    			<span class="next-games-bottom" th:text="${item.round} + ' ' + ${item.channel.name}"/>
+	    		</li>
+	  		</ul>
+		</nav>
+		
+		<footer>
+			Desarrollado por Enrique S&aacute;nchez Jord&aacute;n
+		</footer>
+	</div>
+</div>
 </body>
 </html>
