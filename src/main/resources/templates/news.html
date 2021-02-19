@@ -1,40 +1,23 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
-<head> 
-    <title th:text="${title}"/> 
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="description" th:content="${description}"/>
-    <meta name="keywords" th:content="${keywords}"/>
-    <meta name="author" th:content="${author}" />
-	<meta name="copyright" th:content="${copyright}" />
-	<meta charset="utf-8"/>
-	
-	<link rel="stylesheet" th:href="@{/css/styles.css}">
-</head>
+<head th:replace="fragments/header :: head"></head>
 <body>
-	<header>
-		<h1 th:text="${title}"/>
-	</header>
-	<nav>
-		<ul id="navigation-menu">
-			<li th:each="item: ${menu}"><a th:href="${item.link}" th:utext="${item.item}" /></li>
-		</ul>
-	</nav>
+<div class="page-container">
+	<div class="content-wrap">
+		<div th:replace="fragments/titleNavMenu :: titleNavMenu"></div>
 	
-	<hr/>
-	
-	<section>
-		<hr/>
-		<article class='index-article'>
-			<header>
-				<h3 class="news-title" th:utext="${news.title}"/>
-			</header>
-			<p class="news-content-preview" th:utext="${news.content}"/>
-		</article>
-	</section>
-	
-	<footer>
-		<!-- TODO footer -->
-	</footer>
+		<section>
+			<hr/>
+			<article class='index-article'>
+				<header>
+					<h3 class="news-title" th:utext="${news.title}"/>
+				</header>
+				<p class="news-content-preview" th:utext="${news.content}"/>
+			</article>
+		</section>
+		
+		<footer th:replace="fragments/footer :: footer"></footer>
+	</div>
+</div>
 </body>
 </html>
