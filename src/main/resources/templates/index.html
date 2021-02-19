@@ -10,7 +10,7 @@
 			<header><h2>&Uacute;ltimo Resultado</h2></header>
 			
 			<table>
-				<tr><th colspan="4" th:text="${lastGame.tournament.name} + ' '+ ${lastGame.tournament.season} + ' ' + ${lastGame.round}"/></tr>
+				<tr><th colspan="4" th:text="${lastGame.tournament.name} + ' ' + ${lastGame.tournament.season} + ' ' + ${lastGame.round}"/></tr>
 				<tr>
 					<td id="team-left" th:text="${lastGame.local}"/>
 					<td class="result" th:text="${lastGame.scoreLocal}"/>

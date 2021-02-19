@@ -60,6 +60,10 @@ a {
 	outline: 0;
 }
 
+#site-title {
+	text-decoration: none;
+}
+
 .section-title {
 	padding-top: 0px;
 	padding-bottom: 0px;
