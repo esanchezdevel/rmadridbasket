@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: head"></head>
+<body>
+<div class="page-container">
+	<div class="content-wrap">
+		<div th:replace="fragments/titleNavMenu :: titleNavMenu"></div>
+		
+		<section>
+			<article class='index-article'>
+			<header>
+					<h3>Quienes somos?</h3>
+			</header>
+			<p th:text="${whoweare}">
+			</article>
+		</section>
+
+		<section>
+			<article class='index-article'>
+			<header>
+					<h3>Contacta</h3>
+			</header>
+			<ul>
+				<li th:text="'Correo Electr&oacute;nico:' + ${mail}"/>
+			</ul>
+			</article>
+		</section>
+		
+<footer th:replace="fragments/footer :: footer"></footer>
+	</div>
+</div>
+</body>
+</html>

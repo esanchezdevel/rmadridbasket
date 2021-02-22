@@ -17,7 +17,8 @@ public class NewsController {
 	@GetMapping("/News/{id}")
 	public String index(@PathVariable("id") long id, Model model) {
 
-		newsModel.execute(id, model);
+		model.addAttribute("id", id);
+		newsModel.execute(model);
 		
 		return "news";
 	}
