@@ -5,19 +5,19 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import es.basket.rmadrid.model.ContactModel;
+import es.basket.rmadrid.model.ResultsModel;
 
 @Controller
-public class ContactController {
+public class ResultsController {
 
 	@Autowired
-	private ContactModel contactModel;
+	private ResultsModel resultsModel;
 	
-	@GetMapping("/Contact")
-	public String contact(Model model) {
+	@GetMapping("/Results")
+	public String results(Model model) {
 		
-		contactModel.execute(model);
+		resultsModel.execute(model);
 		
-		return "contact";
+		return "results";
 	}
 }

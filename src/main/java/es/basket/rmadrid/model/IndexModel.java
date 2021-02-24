@@ -4,15 +4,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.ui.Model;
 
-import es.basket.rmadrid.common.CommonParameters;
 import es.basket.rmadrid.dao.repository.GamesRepository;
 import es.basket.rmadrid.dao.repository.NewsRepository;
 
 @Component
-public class IndexModel implements Models {
-
-	@Autowired
-	private CommonParameters commonParameters;
+public class IndexModel extends BaseModel implements Models {
 	
 	@Autowired
 	private NewsRepository news;
@@ -20,9 +16,9 @@ public class IndexModel implements Models {
 	@Autowired
 	private GamesRepository games;
 
+	@Override
 	public void execute(Model model) {
-
-		commonParameters.get(model);
+		super.execute(model);
 		
 		model.addAttribute("news", news.findLastNews(3));
 		

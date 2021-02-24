@@ -35,11 +35,11 @@ CREATE TABLE menus (
 	updated TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
-INSERT INTO menus (menu, item, link, item_order) VALUES ('site-menu', 'Resultados', '#', 1);
+INSERT INTO menus (menu, item, link, item_order) VALUES ('site-menu', 'Resultados', 'Results', 1);
 INSERT INTO menus (menu, item, link, item_order) VALUES ('site-menu', 'Clasificaciones', '#', 2);
 INSERT INTO menus (menu, item, link, item_order) VALUES ('site-menu', 'Plantilla', '#', 3);
 INSERT INTO menus (menu, item, link, item_order) VALUES ('site-menu', 'Palmar&eacute;s', '#', 4);
-INSERT INTO menus (menu, item, link, item_order) VALUES ('site-menu', 'Contacta', '#', 5);
+INSERT INTO menus (menu, item, link, item_order) VALUES ('site-menu', 'Contacta', '/Contact', 5);
 
 
 /*NEWS*/

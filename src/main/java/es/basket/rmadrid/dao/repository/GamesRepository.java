@@ -16,4 +16,7 @@ public interface GamesRepository extends JpaRepository<Games, Long>{
 	
 	@Query(value = "SELECT * FROM games WHERE played = false ORDER BY date ASC LIMIT 3", nativeQuery=true)
 	List<Games> findNextGames();
+	
+	@Query(value = "SELECT * FROM games WHERE played = true ORDER BY date DESC", nativeQuery=true)
+	List<Games> findAllGamesPlayed();
 }
