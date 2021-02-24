@@ -4,23 +4,15 @@ import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.Table;
 
 import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 @Entity
 @Table(name = "news")
 @EntityListeners(AuditingEntityListener.class)
-public class News {
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+public class News extends BaseEntity {
 
 	private String title;
 
@@ -32,17 +24,6 @@ public class News {
 
 	@CreatedDate
 	private Date created;
-	
-	@LastModifiedBy
-	private Date updated;
-
-	public long getId() {
-		return id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
-	}
 
 	public String getTitle() {
 		return title;
@@ -84,20 +65,11 @@ public class News {
 		this.created = created;
 	}
 
-	public Date getUpdated() {
-		return updated;
-	}
-
-	public void setUpdated(Date updated) {
-		this.updated = updated;
-	}
-
 	@Override
 	public String toString() {
-		return "News [id=" + id + ", " + (title != null ? "title=" + title + ", " : "")
+		return "News [" + (title != null ? "title=" + title + ", " : "")
 				+ (content != null ? "content=" + content + ", " : "") + (link != null ? "link=" + link + ", " : "")
-				+ (source != null ? "source=" + source + ", " : "")
-				+ (created != null ? "created=" + created + ", " : "") + (updated != null ? "updated=" + updated : "")
+				+ (source != null ? "source=" + source + ", " : "") + (created != null ? "created=" + created : "")
 				+ "]";
 	}
 }

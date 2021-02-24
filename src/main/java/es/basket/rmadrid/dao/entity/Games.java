@@ -5,24 +5,16 @@ import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 @Entity
 @Table(name = "games")
 @EntityListeners(AuditingEntityListener.class)
-public class Games {
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+public class Games extends BaseEntity {
 
 	private String local;
 
@@ -49,17 +41,6 @@ public class Games {
 	@ManyToOne
 	@JoinColumn(name = "channel_id")
 	private Channels channel;
-	
-	@LastModifiedBy
-	private Date updated;
-
-	public long getId() {
-		return id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
-	}
 
 	public String getLocal() {
 		return local;
@@ -139,13 +120,5 @@ public class Games {
 
 	public void setChannel(Channels channel) {
 		this.channel = channel;
-	}
-
-	public Date getUpdated() {
-		return updated;
-	}
-
-	public void setUpdated(Date updated) {
-		this.updated = updated;
 	}
 }

@@ -1,27 +1,18 @@
 package es.basket.rmadrid.dao.entity;
 
-import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 @Entity
 @Table(name = "channels")
 @EntityListeners(AuditingEntityListener.class)
-public class Channels {
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+public class Channels extends BaseEntity {
 
 	private String name;
 
@@ -29,17 +20,6 @@ public class Channels {
 	
 	@OneToMany(mappedBy = "channel")
     private List<Games> games;
-	
-	@LastModifiedBy
-	private Date updated;
-
-	public long getId() {
-		return id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
-	}
 
 	public String getName() {
 		return name;
@@ -63,13 +43,5 @@ public class Channels {
 
 	public void setGames(List<Games> games) {
 		this.games = games;
-	}
-
-	public Date getUpdated() {
-		return updated;
-	}
-
-	public void setUpdated(Date updated) {
-		this.updated = updated;
 	}
 }

@@ -1,26 +1,17 @@
 package es.basket.rmadrid.dao.entity;
 
-import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.Table;
 
-import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 @Entity
 @Table(name = "menus")
 @EntityListeners(AuditingEntityListener.class)
-public class Menus {
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+public class Menus extends BaseEntity {
 
 	private String item;
 
@@ -28,17 +19,6 @@ public class Menus {
 
 	@Column(name = "item_order")
 	private long itemOrder;
-
-	@LastModifiedBy
-	private Date updated;
-
-	public long getId() {
-		return id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
-	}
 
 	public String getItem() {
 		return item;
@@ -62,13 +42,5 @@ public class Menus {
 
 	public void setItemOrder(long itemOrder) {
 		this.itemOrder = itemOrder;
-	}
-
-	public Date getUpdated() {
-		return updated;
-	}
-
-	public void setUpdated(Date updated) {
-		this.updated = updated;
 	}
 }
