@@ -6,27 +6,27 @@
 	<div class="content-wrap">
 		<div th:replace="fragments/titleNavMenu :: titleNavMenu"></div>
 		
-		<section>
+		<section id="contact-whoweare">
 			<article class='index-article'>
-			<header>
-					<h3>Quienes somos?</h3>
-			</header>
-			<p th:utext="${whoweare}">
+				<header>
+						<h3>Quienes somos?</h3>
+				</header>
+				<p th:utext="${whoweare}">
 			</article>
 		</section>
 
-		<section>
+		<section id="contact-contact-info">
 			<article class='index-article'>
 			<header>
 					<h3>Contacta</h3>
 			</header>
 			<ul>
-				<li th:text="'Correo Electr&oacute;nico:' + ${mail}"/>
+				<li th:utext="'<b>Correo Electr&oacute;nico: </b>' + ${mail}"/>
 			</ul>
 			</article>
 		</section>
 		
-<footer th:replace="fragments/footer :: footer"></footer>
+		<footer th:replace="fragments/footer :: footer"></footer>
 	</div>
 </div>
 </body>
