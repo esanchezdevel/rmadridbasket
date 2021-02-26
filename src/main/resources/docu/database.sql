@@ -87,6 +87,39 @@ INSERT INTO games (`local`, visitor, score_local, score_visitor, tournament_id, 
 INSERT INTO games (`local`, visitor, score_local, score_visitor, tournament_id, round, `date`, played, court, channel_id) VALUES ('Real Madrid', 'San Pablo Burgos', 0, 0, 2, 'Jornada 24' , '2021-02-27 20:45:00', false, 'WiZink Center, Madrid', 1);
 
 
+/* GAMES_STATS */
+
+CREATE TABLE games_stats (
+	id int PRIMARY KEY AUTO_INCREMENT, 
+	game_id int NOT NULL,
+	`local` BOOLEAN NOT NULL,
+	`number` VARCHAR(10) NOT NULL,
+	player VARCHAR(75) NOT NULL, 
+	minutes VARCHAR(10) NOT NULL,
+	points int NOT NULL,
+	fg2 VARCHAR(10) NOT NULL,
+	fg2_rate VARCHAR(10) NOT NULL,
+	fg3 VARCHAR(10) NOT NULL,
+	fg3_rate VARCHAR(10) NOT NULL,
+	fg1 VARCHAR(10) NOT NULL,
+	fg1_rate VARCHAR(10) NOT NULL,
+	rebounds_total int NOT NULL,
+	rebounds_defensive int NOT NULL,
+	rebounds_offensive int NOT NULL,
+	assists int NOT NULL,
+	steals int NOT NULL,
+	lose int NOT NULL,
+	transitions int NOT NULL,
+	blocks int NOT NULL,
+	blocks_received int NOT NULL,
+	slams int NOT NULL,
+	fouls_received int NOT NULL,
+	fouls int NOT NULL,
+	difference VARCHAR(10) NOT NULL,
+	rate VARCHAR(10) NOT NULL,
+	updated TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
 /*TOURNAMENTS*/
 
 CREATE TABLE tournaments (
