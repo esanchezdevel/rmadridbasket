@@ -4,14 +4,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.ui.Model;
 
-import es.basket.rmadrid.dao.repository.GamesRepository;
-import es.basket.rmadrid.dao.repository.NewsRepository;
+import es.basket.rmadrid.jpa.repository.GamesRepository;
+import es.basket.rmadrid.jpa.repository.NewsRepository;
 
 @Component
 public class IndexModel extends BaseModel implements Models {
 	
 	@Autowired
 	private NewsRepository news;
+	
 	
 	@Autowired
 	private GamesRepository games;
@@ -24,6 +25,7 @@ public class IndexModel extends BaseModel implements Models {
 		
 		model.addAttribute("lastGame", games.findLastGamePlayed());
 		
-		model.addAttribute("nextGames", games.findNextGames());
+		//TODO get next games when entity model is created
+		model.addAttribute("nextGames", null);
 	}
 }

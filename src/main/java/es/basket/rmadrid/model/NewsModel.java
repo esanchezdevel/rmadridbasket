@@ -4,8 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.ui.Model;
 
-import es.basket.rmadrid.dao.entity.News;
-import es.basket.rmadrid.dao.repository.NewsRepository;
+import es.basket.rmadrid.jpa.entity.News;
+import es.basket.rmadrid.jpa.repository.NewsRepository;
 
 @Component
 public class NewsModel extends BaseModel implements Models {

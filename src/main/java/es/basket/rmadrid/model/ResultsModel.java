@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.ui.Model;
 
-import es.basket.rmadrid.dao.repository.GamesRepository;
+import es.basket.rmadrid.jpa.repository.GamesRepository;
 
 @Component
 public class ResultsModel extends BaseModel implements Models {
